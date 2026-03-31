@@ -4,11 +4,6 @@ import "./calci.css";
 
 export default function Calculator(){
     const [result,setresult] = useState("");
-
-
-
-
-
     function buttonClick(e){
         setresult(result+e.target.name);
     } 
@@ -21,7 +16,6 @@ export default function Calculator(){
         setresult("");
     }
  
-
     function calculate(){
         try{
         setresult(eval(result));
@@ -30,12 +24,7 @@ export default function Calculator(){
             setresult("ERROR");
         }
     }
-
-
-
-
-
-
+    
     return(
         <div className = "calci-app">
 
@@ -110,13 +99,13 @@ export default function Calculator(){
                     onClick ={buttonClick} 
                     name = ".">.</button>
 
-
                 <button 
                     id= "output"
                     onClick = {calculate}>=</button> 
                     
             </div>
             
-        </div>
+        </div> 
+    
     )
 }
